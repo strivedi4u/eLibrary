@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  
+<display-name>Test</display-name>
+  <context-param> 
+   <description>Location to store uploaded file</description> 
+   <param-name>file-upload</param-name> 
+   <param-value>
+     D:\\EclipseWorkspace\\Test\\src\\main\\webapp\\Files
+   </param-value> 
+</context-param>
+
+<servlet>
+    <servlet-name>download</servlet-name>
+    <servlet-class>com.upload.Download</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>download</servlet-name>
+    <url-pattern>/download</url-pattern>
+</servlet-mapping>
+  
+
+
+
+<servlet>  
+<servlet-name>adminLogin</servlet-name>  
+<jsp-file>/LOGIN/adminLogin.jsp</jsp-file>  
+</servlet>   
+<servlet-mapping>  
+<servlet-name>adminLogin</servlet-name>  
+<url-pattern>/adminLogin</url-pattern>  
+</servlet-mapping>  
+
+<servlet>  
+<servlet-name>userLogin</servlet-name>  
+<jsp-file>/LOGIN/userLogin.jsp</jsp-file>  
+</servlet>   
+<servlet-mapping>  
+<servlet-name>userLogin</servlet-name>  
+<url-pattern>/userLogin</url-pattern>  
+</servlet-mapping>  
+
+<servlet>  
+<servlet-name>ragister</servlet-name>  
+<jsp-file>/RAGISTER/ragister.jsp</jsp-file>  
+</servlet>   
+<servlet-mapping>  
+<servlet-name>ragister</servlet-name>  
+<url-pattern>/ragister</url-pattern>  
+</servlet-mapping>  
+
+<servlet>  
+<servlet-name>forgot</servlet-name>  
+<jsp-file>/RAGISTER/forgot.jsp</jsp-file>  
+</servlet>   
+<servlet-mapping>  
+<servlet-name>forgot</servlet-name>  
+<url-pattern>/forgot</url-pattern>  
+</servlet-mapping>  
+
+
+
+
+<error-page>
+		<location>/ERROR/404.jsp</location>
+</error-page>
+
+
+<filter>
+   <filter-name>AdminLogin</filter-name>
+   <filter-class>filter.AdminLoginCheck</filter-class>
+</filter>
+<filter-mapping>
+   <filter-name>AdminLogin</filter-name>
+   <url-pattern>/ADMIN/*</url-pattern>
+</filter-mapping>
+
+<filter>
+   <filter-name>UserLogin</filter-name>
+   <filter-class>filter.UserLoginCheck</filter-class>
+</filter>
+<filter-mapping>
+   <filter-name>UserLogin</filter-name>
+   <url-pattern>/USER/*</url-pattern>
+</filter-mapping>
+
+<filter>
+   <filter-name>URLcheck</filter-name>
+   <filter-class>filter.URLcheck</filter-class>
+</filter>
+<filter-mapping>
+   <filter-name>URLcheck</filter-name>
+   <url-pattern>/USER/*</url-pattern>
+   <url-pattern>/ADMIN/*</url-pattern>
+   <url-pattern>/COMPONENTS/*</url-pattern>
+</filter-mapping>
+
+
+<servlet>  
+<servlet-name>home1</servlet-name>  
+<jsp-file>/ADMIN/home1.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home1</servlet-name>  
+<url-pattern>/ADMIN/home1</url-pattern>  
+</servlet-mapping>  
+
+<servlet>  
+<servlet-name>home2</servlet-name>  
+<jsp-file>/ADMIN/home2.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home2</servlet-name>  
+<url-pattern>/ADMIN/home2</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>home3</servlet-name>  
+<jsp-file>/ADMIN/home3.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home3</servlet-name>  
+<url-pattern>/ADMIN/home3</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>home4</servlet-name>  
+<jsp-file>/ADMIN/home4.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home4</servlet-name>  
+<url-pattern>/ADMIN/home4</url-pattern>  
+</servlet-mapping>  
+
+ 
+<servlet>  
+<servlet-name>home5</servlet-name>  
+<jsp-file>/ADMIN/home5.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home5</servlet-name>  
+<url-pattern>/ADMIN/home5</url-pattern>  
+</servlet-mapping>  
+    
+
+<servlet>  
+<servlet-name>home6</servlet-name>  
+<jsp-file>/ADMIN/home6.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home6</servlet-name>  
+<url-pattern>/ADMIN/home6</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>home7</servlet-name>  
+<jsp-file>/ADMIN/home7.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home7</servlet-name>  
+<url-pattern>/ADMIN/home7</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>home8</servlet-name>  
+<jsp-file>/ADMIN/home8.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>home8</servlet-name>  
+<url-pattern>/ADMIN/home8</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>index1</servlet-name>  
+<jsp-file>/USER/home1.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index1</servlet-name>  
+<url-pattern>/USER/home1</url-pattern>  
+</servlet-mapping>  
+
+
+<servlet>  
+<servlet-name>index2</servlet-name>  
+<jsp-file>/USER/home2.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index2</servlet-name>  
+<url-pattern>/USER/home2</url-pattern>  
+</servlet-mapping>
+
+
+<servlet>  
+<servlet-name>index3</servlet-name>  
+<jsp-file>/USER/home3.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index3</servlet-name>  
+<url-pattern>/USER/home3</url-pattern>  
+</servlet-mapping>
+
+
+<servlet>  
+<servlet-name>index4</servlet-name>  
+<jsp-file>/USER/home4.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index4</servlet-name>  
+<url-pattern>/USER/home4</url-pattern>  
+</servlet-mapping>
+
+
+<servlet>  
+<servlet-name>index5</servlet-name>  
+<jsp-file>/USER/home5.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index5</servlet-name>  
+<url-pattern>/USER/home5</url-pattern>  
+</servlet-mapping>
+
+
+<servlet>  
+<servlet-name>index6</servlet-name>  
+<jsp-file>/USER/home6.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index6</servlet-name>  
+<url-pattern>/USER/home6</url-pattern>  
+</servlet-mapping>
+
+
+<servlet>  
+<servlet-name>index7</servlet-name>  
+<jsp-file>/USER/home7.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>index7</servlet-name>  
+<url-pattern>/USER/home7</url-pattern>  
+</servlet-mapping>
+
+
+
+<servlet>  
+<servlet-name>welcome</servlet-name>  
+<jsp-file>/welcome.jsp</jsp-file>  
+</servlet>    
+<servlet-mapping>  
+<servlet-name>welcome</servlet-name>  
+<url-pattern>/welcome</url-pattern>  
+</servlet-mapping>
+
+
+
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+</web-app>

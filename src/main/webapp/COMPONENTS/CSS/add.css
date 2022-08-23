@@ -1,0 +1,76 @@
+@charset "ISO-8859-1";
+
+    body {
+        color: #566787;
+        background: #f5f5f5;
+        font-family: "Varela Round", sans-serif;
+    }
+    .form-control {
+        border-color: #e5e5e5;
+        box-shadow: none;
+    }
+    .form-control:focus {
+        border-color: #0cb4aa;
+    }
+    .contact-modal {
+        padding: 50px;
+        margin: 30px auto;
+    }
+    .contact-modal h4 {
+        font-size: 26px;
+        display: inline-block;
+    }
+    .contact-modal .form-control, .contact-modal .btn  {
+        min-height: 38px;
+        border-radius: 1px;
+        outline: none;
+        border-radius: 2px;
+		transition: all 0.5s;
+    }
+    .contact-modal textarea {
+        height: 144px;
+    }
+    .contact-modal .btn-primary {
+        min-width: 120px;
+        background: #f04f01;
+        border: none;
+    }
+    .contact-modal .btn-primary:hover, .contact-modal .btn-primary:focus {
+        background: #0ba69e;
+		outline: none;
+    }
+    .contact-modal .btn-link {
+        color: #0cb4aa;
+    }
+    .contact-modal label {
+        opacity: 0.9;
+        font-weight: normal;
+        font-size: 95%;
+    }
+    .contact-modal textarea {
+        resize: vertical;
+    }
+    .contact-modal .modal-header {
+        padding: 20px 35px 15px;
+    }
+    .contact-modal .modal-content {
+        border-radius: 1px;
+    }
+    .modal-footer {
+        padding: 20px 35px;
+    }
+    .contact-modal .close {
+        position: absolute;
+        right: 35px;
+        top: 25px;
+    }
+    .contact-modal .modal-body {
+        padding: 25px 35px 15px;
+    }
+    .hint-text {
+        opacity: 0.8;
+    }
+    .trigger-btn {
+		display: inline-block;
+		margin: 100px auto;
+	}
